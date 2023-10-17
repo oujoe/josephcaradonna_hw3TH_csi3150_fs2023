@@ -1,22 +1,30 @@
 /*main css styles*/
-
-.intro {
-  margin-top: 120px;
+body {
+  padding: 0;
+  margin: 0;
 }
 
-.content-paragraphs {
-  background-color: #4e4b5c;
-  margin-top: 20px;
+#hero-content {
+  /* Background image from https://www.mackinacisland.org/activities/arch-rock/ */
+  background: url("../img/arch-rock.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
-.progressbar {
-  padding-top: 20px;
-  padding-bottom: 20px;
-  background-color: #4e4b5c;
+#hero-content img {
+  margin-top: 100px;
+  margin-bottom: 25px;
 }
 
-footer {
-  text-align: center;
+#hero-content h1 {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 60pt;
+  color: yellow;
 }
 
 /* two column layout learned from w3schools https://www.w3schools.com/howto/howto_css_two_columns.asp */
