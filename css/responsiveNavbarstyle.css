@@ -1,0 +1,114 @@
+/*responsive nav bar*/
+
+/*reset all browser styling and choose alt box model option */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: cursive;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+/* style the layout of navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #242423;
+  color: #ff8552;
+}
+
+.nav-links a {
+  color: white;
+  font-size: large;
+}
+
+.nav-links li {
+    color: white;
+    font-size: large;
+    justify-content: space-between;
+  }
+
+
+/* style logo */
+
+.logo {
+  font-size: 24px;
+}
+
+/* style the navbar menu */
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1em;
+  font-size: 20px;
+  color: white;
+}
+
+.menu a{
+    color: white;
+  }
+
+.menu a:hover {
+  color: #ff8552;
+  transition: 0.3s ease;
+}
+
+.menu li {
+  padding: 2px 6px;
+}
+
+/* responsive navbar styling */
+
+input[type="checkbox"] {
+  display: none;
+}
+
+.hamburger {
+  display: none;
+  font-size: 22px;
+  user-select: none;
+}
+
+/* responsive media query */
+@media (max-width: 600px) {
+  .menu {
+    display: none;
+    position: absolute;
+    background-color: #4e4b5c;
+    right: 0;
+    left: 0;
+    text-align: center;
+    margin-top: 30px;
+    padding: 16px 0;
+  }
+
+  .menu li:hover {
+    display: inline-block;
+    transition: 0.3s ease;
+  }
+
+  .menu li + li {
+    margin-top: 12px;
+  }
+
+  input[type="checkbox"]:checked ~ .menu {
+    display: block;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}

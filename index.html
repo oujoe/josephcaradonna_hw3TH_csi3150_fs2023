@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<!--This is a comment in HTML-->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joseph Caradonna</title>
+    <!--downloaded favicon from https://icons8.com/icons/set/favicon-->
+    <link rel="icon" type="image/x-icon" href="./img/icons8-favicon-64.png">
+    <!--CSS libraries / files-->
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/responsiveNavbarstyle.css">
+    <!--JS libraries / files-->
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <!--Logo-->
+        <div class="logo">
+          <h2>Joe's Portfolio Site</h2>
+        </div>
+        <ul class="nav-links">
+          <!--Hamburger menu icon and checkbox from class-->
+          <!--Gives error on W3 but was used in class-->
+          <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+          <input type="checkbox" id="checkbox_toggle">
+          <div class="menu">
+            <li><a href="/index.html" class="navOption">Home</a></li>
+            <li>
+              <a href="./html/my_resume.html" class="navOption">Resume</a>
+            </li>
+            <li>
+              <a href="./html/my_fun_facts.html" class="navOption">Fun Facts</a>
+            </li>
+          </div>
+        </ul>
+      </nav>
+
+      <hr>
+    </header>
+
+    <div class="row">
+      <div class="column">
+        <h1 class="intro">Welcome to Joseph Caradonna's Portfolio!</h1>
+        <blockquote cite="https://www.quotes.net/mquote/129399" id="quote">
+          "If you ain't first, you're last" - Reese Bobby
+        </blockquote>
+        <button onclick = "window.location.href='./html/my_resume.html';">Check out my resume!</button>
+      </div>
+      <div class="column">
+        <!--Added image that was downloaded off of instagram-->
+        <img
+          src="./img/joepic.jpg"
+          alt="This is a picture of Joseph Caradonna"
+          width="340"
+          height="400"
+        >
+      </div>
+    </div>
+
+    <!--Main Body-->
+    <div class="content-paragraphs">
+      <p>
+        My name is Joseph Caradonna and I am a student at Oakland University. I
+        am studying Information Technology and will be graduating in December
+        with a Bachelor of Science in Information Technology. I went to Chippewa
+        Valley High School and did my general education credits at Macomb
+        Community College. I have spent the last 5 years working for Roosen,
+        Varchetti, and Olivier where I have been refining my skills in IT
+        Support. My first job was working at Hungry Howies as an
+        Insider/Delivery Driver where I learned customer service skills. My
+        future plans are to open my own IT support company for clients across
+        Michigan. To learn more about my professional experience, see my
+        <a href="./html/my_resume.html" class="link">resume</a> and to learn
+        more about some of my favorite things go to
+        <a href="./html/my_fun_facts.html" class="link">fun facts</a>.
+      </p>
+
+      <p>
+        Outside of work I like to spend my time traveling throughout the United
+        States as I love visiting new places and learning about their history. I
+        also have a dirt bike that I like to ride on Michigan's vast network of
+        trails. This winter I plan on spending a lot of time learning how to
+        snowboard and snowmobile. Currently I have been working on a web
+        development project for my friend's band,
+        <a href="https://moravianband.com/" class="link">Moravian</a>, which has
+        reinvigorated my love for web design.
+      </p>
+    </div>
+    <!--learned how to implement progress bar from https://www.w3schools.com/tags/tag_progress.asp-->
+    <div class="progressbar">
+      <label for="graduation">Progress to degree in credits:</label>
+      <progress id="graduation" value="138" max="146">98%</progress>
+    </div>
+
+    <hr>
+
+    <!--Footer with Copyright and LinkedIN link-->
+    <footer>
+      <p>
+        <a
+          href="https://www.linkedin.com/in/joseph-caradonna-9285b6174/"
+          class="link"
+          >Joseph Caradonna LinkedIn</a
+        >
+        - To contact me email josephcaradonna@outlook.com
+      </p>
+
+      <p>Copyright © 2023 Joseph Caradonna - All Rights Reserved</p>
+    </footer>
+  </body>
+</html>
