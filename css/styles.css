@@ -1,9 +1,13 @@
-/*main css styles*/
+/* import font from https://www.cdnfonts.com/harlow-solid-italic.font */
+@import url("https://fonts.cdnfonts.com/css/harlow-solid-italic");
+
+/* main css styles */
 body {
   padding: 0;
   margin: 0;
 }
 
+/* Hero section */
 #hero-content {
   /* Background image from https://www.mackinacisland.org/activities/arch-rock/ */
   background: url("../img/arch-rock.png");
@@ -16,15 +20,75 @@ body {
   flex-direction: column;
 }
 
-#hero-content img {
+#milogo {
   margin-top: 100px;
+  margin-bottom: 20px;
+  filter: drop-shadow(black 10px 10px);
+}
+
+#down-arrow {
   margin-bottom: 25px;
 }
 
 #hero-content h1 {
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-family: "Harlow Solid Italic", sans-serif;
   font-size: 60pt;
-  color: yellow;
+  color: orange;
+  text-shadow: 4px 4px black;
+}
+
+#hero-content h2 {
+  font-size: 20pt;
+  color: white;
+  margin-top: -25px;
+}
+
+/* Modified from example at https://www.w3schools.com/howto/howto_css_display_element_hover.asp */
+.hide {
+  display: none;
+}
+
+.hover-dropdown:hover + .hide {
+  display: block;
+  color: black;
+  font-size: 35px;
+  background-color: orange;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+/* List section */
+#list-content {
+  /* Background image from https://mackinac.com/about-mackinac-island/mackinac-bridge/ */
+  background: url("../img/mackinac-bridge.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 40px;
+  padding-bottom: 150px;
+  padding-left: 20px;
+  padding-right: 30px;
+}
+
+#list-content h1 {
+  font-family: sans-serif;
+  font-size: 30pt;
+  color: orange;
+}
+
+#list-content p {
+  font-family: sans-serif;
+  color: white;
+}
+
+#hidden-list {
+  padding: 20px;
+  background-color: grey;
+  margin-top: 10px;
 }
 
 /* two column layout learned from w3schools https://www.w3schools.com/howto/howto_css_two_columns.asp */
@@ -38,27 +102,392 @@ body {
   flex: auto;
 }
 
+#col2 {
+  margin-left: 120px;
+}
+
 .row button {
-  margin-top: 80px;
+  margin-top: 5px;
   margin-left: 20px;
-  padding: 18px 18px 18px 18px;
-  background-color: #4e4b5c;
+  padding: 10px 18px 10px 18px;
+  background-color: orange;
   font-size: 16px;
   font-weight: bold;
   font-style: oblique;
 }
 
-.row button a {
+/* Experience section */
+#experience-content {
+  /* Background image from https://tahquamenoncountry.com/things-to-do/the-great-outdoors/winter-at-tahquamenon-falls */
+  background: url("../img/tahquamenon-falls.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-left: 20px;
+  padding-bottom: 20px;
+}
+
+#experience-content h1 {
+  font-family: "Harlow Solid Italic", sans-serif;
+  font-size: 60pt;
+  color: orange;
+  text-shadow: 4px 4px black;
+}
+
+#images-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 80px;
+}
+
+#img1-container {
+  /* Background image from https://tahquamenoncountry.com/things-to-do/the-great-outdoors/winter-at-tahquamenon-falls */
+  background: url("../img/Grand-Hotel-web.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  display: flex;
+  flex-direction: column;
+  margin: 15px;
+}
+
+#img1-container img {
+  margin-left: 30px;
+  vertical-align: bottom;
+  margin-bottom: 5px;
+  margin-right: 250px;
+}
+
+#img1-container h2 {
+  padding-top: 400px;
+  margin-left: 20px;
   color: white;
-  padding: 20px 20px 20px 20px;
 }
 
-.row button a:hover {
-  color: #ff8552;
+#img2-container {
+  /* Background image from https://en.wikipedia.org/wiki/Fort_Michilimackinac */
+  background: url("../img/fort.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  display: flex;
+  flex-direction: column;
+  margin: 15px;
 }
 
-.column img {
-  float: right;
-  margin-right: 20px;
-  margin-top: 120px;
+#img2-container img {
+  margin-left: 30px;
+  vertical-align: bottom;
+  margin-bottom: 5px;
+  margin-right: 250px;
+}
+
+#img2-container h2 {
+  padding-top: 400px;
+  margin-left: 20px;
+  color: white;
+}
+
+#img3-container {
+  /* Background image from https://www.mackinacisland.org/blog/why-butterflies-are-such-a-big-deal-on-mackinac-island/ */
+  background: url("../img/butterfly.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  display: flex;
+  flex-direction: column;
+  margin: 15px;
+}
+
+#img3-container img {
+  margin-left: 30px;
+  vertical-align: bottom;
+  margin-bottom: 5px;
+  margin-right: 250px;
+}
+
+#img3-container h2 {
+  padding-top: 400px;
+  margin-left: 20px;
+  color: white;
+}
+
+/* Modified from example at https://www.w3schools.com/howto/howto_css_display_element_hover.asp */
+.hide1 {
+  display: none;
+  max-width: 330px;
+  margin-top: 20px;
+}
+
+.down-arrow1:hover + .hide1 {
+  display: block;
+  color: black;
+  font-size: 12px;
+  background-color: orange;
+}
+
+.hide2 {
+  display: none;
+  max-width: 330px;
+  margin-top: 20px;
+}
+
+.down-arrow2:hover + .hide2 {
+  display: block;
+  color: black;
+  font-size: 12px;
+  background-color: orange;
+}
+
+.hide3 {
+  display: none;
+  max-width: 330px;
+  margin-top: 20px;
+}
+
+.down-arrow3:hover + .hide3 {
+  display: block;
+  color: black;
+  font-size: 12px;
+  background-color: orange;
+}
+
+#hidden-list2 {
+  padding: 20px;
+  background-color: grey;
+  margin-top: 10px;
+}
+
+.experience-button button {
+  margin-top: 5px;
+  margin-left: 20px;
+  padding: 10px 18px 10px 18px;
+  background-color: orange;
+  font-size: 16px;
+  font-weight: bold;
+  font-style: oblique;
+  margin-bottom: 20px;
+}
+
+/* Info paragraphs section */
+#infoparagraphs-content {
+  /* Background image from https://www.vogue.com/article/mackinac-island-weekend-travel-guide */
+  background: url("../img/island.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 30px;
+  color: white;
+}
+
+#infoparagraphs-content p {
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 10px;
+  padding: 10px;
+}
+
+#infoparagraphs-content h1 {
+  font-family: sans-serif;
+  font-size: 30pt;
+  color: orange;
+  text-shadow: 2px 2px black;
+}
+
+#infoparagraphs-content h2 {
+  font-family: sans-serif;
+  font-size: 20pt;
+  color: orange;
+  text-shadow: 2px 2px black;
+}
+
+/* Circles section */
+#circles-content {
+  /* Background image from https://www.onlyinyourstate.com/michigan/cherry-blossoms-mi/ */
+  background: url("../img/cherry.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 100px;
+}
+
+.circle {
+  text-align: center;
+  font-family: sans-serif;
+  background-color: black;
+  border-radius: 50%;
+  height: 140px;
+  width: 140px;
+  padding: 20px;
+  margin: 30px;
+}
+
+.circle h1 {
+  color: orange;
+  font-size: 36px;
+}
+
+.circle h2 {
+  color: white;
+  font-size: 16px;
+}
+
+/* Review section */
+#review-content {
+  /* Background image from https://en.wikipedia.org/wiki/Detroit */
+  background: url("../img/detroit.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 50px;
+}
+
+.review-guy {
+  border-radius: 50%;
+  height: 200px;
+  width: 200px;
+}
+
+#review-content p {
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  padding: 10px;
+  max-width: 50%;
+}
+
+#review-content h2 {
+  text-align: center;
+  color: white;
+}
+
+/* Modified from example at https://www.w3schools.com/howto/howto_css_display_element_hover.asp */
+.hide-review {
+  display: none;
+}
+
+.down-arrow-review:hover + .hide-review {
+  display: block;
+  color: black;
+  font-size: 12px;
+  background-color: orange;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+/* Image gallery section */
+#imggallery-content {
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+  max-height: 500px;
+}
+
+.gallery {
+  width: 25%;
+  object-fit: cover;
+}
+
+.overlay-left {
+  position: absolute;
+  left: 5px;
+  align-self: center;
+  height: 64px;
+  width: 64px;
+}
+
+.overlay-right {
+  position: absolute;
+  right: 5px;
+  align-self: center;
+  height: 64px;
+  width: 64px;
+}
+
+/* Contact us section */
+#contact-content {
+  /* Background image from https://www.uptravel.com/things-to-do/attractions/kitch-iti-kipi/ */
+  background: url("../img/kitch.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  display: flex;
+  justify-content: center;
+  padding: 50px;
+}
+
+#col-inputs {
+  display: flex;
+  flex-direction: column;
+}
+
+#col-inputs input {
+  margin: 5px;
+  background-color: transparent;
+  border: 2px solid white;
+  width: 350px;
+  height: 25px;
+  font-family: sans-serif;
+}
+
+#col-inputs textarea {
+  margin: 5px;
+  background-color: transparent;
+  border: 2px solid white;
+  width: 350px;
+  height: 100px;
+  font-family: sans-serif;
+}
+
+.row2 {
+  display: flex;
+  align-items: top;
+}
+
+.column-2 {
+  margin-left: 60px;
+}
+
+.row2 button {
+  margin-top: 5px;
+  padding: 10px 18px 10px 18px;
+  background-color: orange;
+  font-size: 16px;
+  font-weight: bold;
+  font-style: oblique;
+}
+
+.column-1 h1 {
+  font-family: sans-serif;
+  font-size: 40pt;
+  color: orange;
+  text-shadow: 4px 4px black;
+  margin-top: -5px;
+}
+
+.column-1 h3 {
+  font-family: sans-serif;
+  font-size: 12pt;
+  color: white;
+}
+
+.icons svg {
+  margin-right: 10px;
 }
